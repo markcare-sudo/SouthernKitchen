@@ -51,7 +51,7 @@ export default function SouthernKitchenLanding() {
           {/* HERO IMAGE */}
           <div className="hidden lg:block">
             <img
-              src="https://images.unsplash.com/photo-1550547660-d9450f859349o"
+              src={ITEMS.Hero}
               alt="Biryani Bowl"
               className="rounded-2xl shadow-2xl"
             />
@@ -90,16 +90,16 @@ export default function SouthernKitchenLanding() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { name: "Chicken Biryani", type: "Normal", img: ITEMS.Chicken_Biryani_Normal },
-              { name: "Chicken Biryani", type: "Dum", img: ITEMS.Chicken_Biryani_Dum },
+              { name: "Chicken Dum Biryani", type: "Dum", img: ITEMS.Chicken_Biryani_Dum },
 
               { name: "Mutton Biryani", type: "Normal", img: ITEMS.Mutton_Biryani_Normal },
-              { name: "Mutton Biryani", type: "Dum", img: ITEMS.Mutton_Biryani_Dum },
+              { name: "Mutton Dum Biryani", type: "Dum", img: ITEMS.Mutton_Biryani_Dum },
 
               { name: "Veg Biryani", type: "Normal", img: ITEMS.Veg_Biryani_Normal },
-              { name: "Veg Biryani", type: "Dum", img: ITEMS.Veg_Biryani_Dum },
+              { name: "Veg Dum Biryani", type: "Dum", img: ITEMS.Veg_Biryani_Dum },
 
               { name: "Egg Biryani", type: "Normal", img: ITEMS.Egg_Biryani_Normal },
-              { name: "Egg Biryani", type: "Dum", img: ITEMS.Egg_Biryani_Dum },
+              { name: "Egg Dum Biryani", type: "Dum", img: ITEMS.Egg_Biryani_Dum },
 
               { name: "Kebab Biryani", type: "Dum", img: ITEMS.Kebab_Biryani_Dum },
 

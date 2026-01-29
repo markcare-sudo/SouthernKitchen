@@ -14,6 +14,8 @@ export const LOGOS = {
 
 
 export const ITEMS = {
+  Hero: import.meta.env.VITE_HERO,
+
   Chicken_Biryani_Normal: import.meta.env.VITE_CHICKEN_BIRYANI_NORMAL,
   Chicken_Biryani_Dum: import.meta.env.VITE_CHICKEN_BIRYANI_DUM,
 
