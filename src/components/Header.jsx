@@ -48,7 +48,8 @@ const Header = ({ open, setOpen }) => {
                 Southern Kitchen
               </div>
               <div className="text-xs text-slate-500">
-                Authentic Hyderabadi Biryani
+                {/* Authentic Hyderabadi Biryani */}
+                Home Made Authentic Flavours
               </div>
             </div>
           </Link>

@@ -1,5 +1,7 @@
 import React from "react";
-import { EXTERNAL_CONTACT_NUMBER, INTERNAL_CONTACT_NUMBER } from "@/utils/data";
+import { INTERNAL_CONTACT_NUMBER } from "@/utils/data";
+import { ITEMS } from "@/constants/branding";
+
 
 export default function SouthernKitchenLanding() {
   const whatsappNumber = INTERNAL_CONTACT_NUMBER; // 🔁 Replace with real WhatsApp number
@@ -14,7 +16,7 @@ export default function SouthernKitchenLanding() {
       {/* ================= HERO SECTION ================= */}
       <section className="relative overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1543353071-087092ec393a"
+          src="/assets/Images/Banner Image.png"
           alt="Hyderabadi Biryani"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
@@ -57,77 +59,119 @@ export default function SouthernKitchenLanding() {
         </div>
       </section>
 
-      {/* ================= WHY SOUTHERN KITCHEN ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Why Southern Kitchen?
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            { title: "Authentic Recipe", img: "https://images.unsplash.com/photo-1550547660-d9450f859349" },
-            { title: "Premium Ingredients", img: "https://images.unsplash.com/photo-1543353071-087092ec393a" },
-            { title: "Hygienic Cloud Kitchen", img: "https://images.unsplash.com/photo-1550547660-d9450f859349" },
-            { title: "Fast Delivery", img: "https://images.unsplash.com/photo-1543353071-087092ec393a" },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="bg-[#181818] rounded-xl p-6 text-center hover:scale-105 transition"
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="h-40 w-full object-cover rounded-lg mb-4"
-              />
-              <h3 className="font-semibold text-lg">{item.title}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ================= MENU SECTION ================= */}
-      <section className="bg-[#141414] py-20">
+      {/* ================= BULK ORDER MENU ================= */}
+      <section className="bg-[#141414] py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Our Signature Biryanis
+          {/* HEADER */}
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-4">
+            Bulk Biryani Menu
           </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {[{
-              name: "Chicken Dum Biryani",
-              img: "https://images.unsplash.com/photo-1543353071-087092ec393a",
-            }, {
-              name: "Mutton Dum Biryani",
-              img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398",
-            }, {
-              name: "Veg Dum Biryani",
-              img: "https://images.unsplash.com/photo-1543353071-087092ec393a",
-            }].map((item, i) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-20">
+            {[
+              "Corporate Offices",
+              "IT Companies",
+              "PGs & Hostels",
+              "Colleges",
+              "Factories",
+              "Weddings",
+              "Family Functions",
+              "Events & Parties",
+            ].map((item, i) => (
               <div
                 key={i}
-                className="bg-[#1c1c1c] rounded-2xl overflow-hidden shadow-lg"
+                className="bg-[#2a2a2a] rounded-xl py-4 text-center font-medium text-gray-200"
               >
+                {item}
+              </div>
+            ))}
+          </div>
+
+          {/* MENU GRID */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { name: "Chicken Biryani", type: "Normal", img: ITEMS.Chicken_Biryani_Normal },
+              { name: "Chicken Biryani", type: "Dum", img: ITEMS.Chicken_Biryani_Dum },
+
+              { name: "Mutton Biryani", type: "Normal", img: ITEMS.Mutton_Biryani_Normal },
+              { name: "Mutton Biryani", type: "Dum", img: ITEMS.Mutton_Biryani_Dum },
+
+              { name: "Veg Biryani", type: "Normal", img: ITEMS.Veg_Biryani_Normal },
+              { name: "Veg Biryani", type: "Dum", img: ITEMS.Veg_Biryani_Dum },
+
+              { name: "Egg Biryani", type: "Normal", img: ITEMS.Egg_Biryani_Normal },
+              { name: "Egg Biryani", type: "Dum", img: ITEMS.Egg_Biryani_Dum },
+
+              { name: "Kebab Biryani", type: "Dum", img: ITEMS.Kebab_Biryani_Dum },
+
+              { name: "Shadi Ki Chicken Biryani", type: "Normal", img: ITEMS.Shadi_Chicken_Biryani },
+              { name: "Shadi Ki Mutton Biryani", type: "Normal", img: ITEMS.Shadi_Mutton_Biryani },
+
+              { name: "Chicken Tahari", type: "Normal", img: ITEMS.Chicken_Tahari },
+              { name: "Mutton Tahari", type: "Normal", img: ITEMS.Mutton_Tahari },
+
+              { name: "Chicken Pulav", type: "Normal", img: ITEMS.Chicken_Pulav },
+              { name: "Mutton Pulav", type: "Normal", img: ITEMS.Mutton_Pulav },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#1c1c1c] rounded-xl overflow-hidden hover:scale-105 transition shadow-lg"
+              >
+                {/* IMAGE */}
                 <img
                   src={item.img}
-                  alt={item.name}
-                  className="h-56 w-full object-cover"
+                  alt={`${item.name} ${item.type}`}
+                  className="h-80 w-full object-cover"
                 />
+
+                {/* CONTENT */}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">{item.name}</h3>
+                  <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
+
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm text-gray-400">
+                      Type: <span className="text-white">{item.type}</span>
+                    </span>
+                    <span className="text-sm text-gray-400">
+                      Includes: <span className="text-white">Raita, Curry</span>
+                    </span>
+                  </div>
+
                   <a
                     href={orderNowLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-yellow-400 text-black px-6 py-2 rounded-full font-medium hover:bg-yellow-300"
+                    className="inline-block w-full text-center bg-yellow-400 text-black py-2 rounded-full font-medium hover:bg-yellow-300"
                   >
-                    Order Now
+                    Enquire on WhatsApp
                   </a>
                 </div>
               </div>
             ))}
           </div>
+
+
+          {/* FOOTER CTA */}
+          <div className="mt-20 text-center">
+            <h3 className="text-2xl font-bold mb-4">
+              Need Bulk Orders for Your Team or Event?
+            </h3>
+            <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+              We handle small to large bulk orders with consistent taste,
+              hygienic preparation, and on-time delivery.
+            </p>
+            <a
+              href={orderNowLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-yellow-400 text-black px-10 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300"
+            >
+              Get Bulk Order Quote
+            </a>
+          </div>
         </div>
       </section>
+
+
     </div>
   );
 }
