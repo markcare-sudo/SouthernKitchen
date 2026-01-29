@@ -1,6 +1,10 @@
 import React from "react";
 import { INTERNAL_CONTACT_NUMBER } from "@/utils/data";
 import { ITEMS } from "@/constants/branding";
+import { motion } from "framer-motion";
+import ScrollBar from "@/components/ScrollBar";
+import Banner from "@/components/Banner";
+
 
 
 export default function SouthernKitchenLanding() {
@@ -11,53 +15,17 @@ export default function SouthernKitchenLanding() {
 
   const orderNowLink = `https://wa.me/${whatsappNumber}?text=${message}`;
 
+
   return (
     <div className="bg-[#0f0f0f] text-white min-h-screen font-sans">
+
+      {/* TOP AUTO SCROLL BAR */}
+      {/* TOP AUTO SCROLLING BULK COMBOS BAR */}
+      <ScrollBar />
+
       {/* ================= HERO SECTION ================= */}
-      <section className="relative overflow-hidden">
-        <img
-          src="/assets/Images/Banner Image.png"
-          alt="Hyderabadi Biryani"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-        />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-              Authentic <span className="text-yellow-400">Hyderabadi</span>
-              <br /> Dum Biryani
-            </h1>
-            <p className="mt-6 text-gray-300 text-base sm:text-lg max-w-xl">
-              Slow-cooked, aromatic, royal Hyderabadi biryani prepared in
-              traditional dum style. Crafted fresh in our cloud kitchen and
-              delivered hot to your doorstep.
-            </p>
+      <Banner />
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a
-                href={orderNowLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition text-center"
-              >
-                Order on WhatsApp
-              </a>
-
-              <span className="text-sm text-gray-400 self-center">
-                Delivery Only • Cloud Kitchen
-              </span>
-            </div>
-          </div>
-
-          {/* HERO IMAGE */}
-          <div className="hidden lg:block">
-            <img
-              src={ITEMS.Hero}
-              alt="Biryani Bowl"
-              className="rounded-2xl shadow-2xl"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* ================= BULK ORDER MENU ================= */}
       <section className="bg-[#141414] py-24">
@@ -90,16 +58,16 @@ export default function SouthernKitchenLanding() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { name: "Chicken Biryani", type: "Normal", img: ITEMS.Chicken_Biryani_Normal },
-              { name: "Chicken Dum Biryani", type: "Dum", img: ITEMS.Chicken_Biryani_Dum },
+              // { name: "Chicken Dum Biryani", type: "Dum", img: ITEMS.Chicken_Biryani_Dum },
 
               { name: "Mutton Biryani", type: "Normal", img: ITEMS.Mutton_Biryani_Normal },
-              { name: "Mutton Dum Biryani", type: "Dum", img: ITEMS.Mutton_Biryani_Dum },
+              // { name: "Mutton Dum Biryani", type: "Dum", img: ITEMS.Mutton_Biryani_Dum },
 
               { name: "Veg Biryani", type: "Normal", img: ITEMS.Veg_Biryani_Normal },
-              { name: "Veg Dum Biryani", type: "Dum", img: ITEMS.Veg_Biryani_Dum },
+              // { name: "Veg Dum Biryani", type: "Dum", img: ITEMS.Veg_Biryani_Dum },
 
               { name: "Egg Biryani", type: "Normal", img: ITEMS.Egg_Biryani_Normal },
-              { name: "Egg Dum Biryani", type: "Dum", img: ITEMS.Egg_Biryani_Dum },
+              // { name: "Egg Dum Biryani", type: "Dum", img: ITEMS.Egg_Biryani_Dum },
 
               { name: "Kebab Biryani", type: "Dum", img: ITEMS.Kebab_Biryani_Dum },
 
