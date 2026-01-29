@@ -20,7 +20,7 @@ export default function SouthernKitchenLanding() {
           alt="Hyderabadi Biryani"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
               Authentic <span className="text-yellow-400">Hyderabadi</span>
@@ -61,7 +61,7 @@ export default function SouthernKitchenLanding() {
 
       {/* ================= BULK ORDER MENU ================= */}
       <section className="bg-[#141414] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4">
           {/* HEADER */}
           <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-4">
             Bulk Biryani Menu
@@ -124,7 +124,7 @@ export default function SouthernKitchenLanding() {
                 />
 
                 {/* CONTENT */}
-                <div className="p-6">
+                <div className="p-4">
                   <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
 
                   <div className="flex items-center justify-between mb-4">
