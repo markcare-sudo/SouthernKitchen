@@ -41,11 +41,11 @@ const Header = ({ open, setOpen }) => {
           {/* Logo / Brand */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold">
-              SK
+              TSK
             </div>
             <div>
               <div className="text-lg font-extrabold text-slate-900">
-                Southern Kitchen
+                The Southern Kitchen
               </div>
               <div className="text-xs text-slate-500">
                 {/* Authentic Hyderabadi Biryani */}
