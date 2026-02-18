@@ -55,19 +55,15 @@ export default function SouthernKitchenLanding() {
           </div>
 
           {/* MENU GRID */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { name: "Chicken Biryani", type: "Normal", img: ITEMS.Chicken_Biryani_Normal },
-              // { name: "Chicken Dum Biryani", type: "Dum", img: ITEMS.Chicken_Biryani_Dum },
 
               { name: "Mutton Biryani", type: "Normal", img: ITEMS.Mutton_Biryani_Normal },
-              // { name: "Mutton Dum Biryani", type: "Dum", img: ITEMS.Mutton_Biryani_Dum },
 
               { name: "Veg Biryani", type: "Normal", img: ITEMS.Veg_Biryani_Normal },
-              // { name: "Veg Dum Biryani", type: "Dum", img: ITEMS.Veg_Biryani_Dum },
 
               { name: "Egg Biryani", type: "Normal", img: ITEMS.Egg_Biryani_Normal },
-              // { name: "Egg Dum Biryani", type: "Dum", img: ITEMS.Egg_Biryani_Dum },
 
               { name: "Kebab Biryani", type: "Dum", img: ITEMS.Kebab_Biryani_Dum },
 
@@ -84,14 +80,11 @@ export default function SouthernKitchenLanding() {
                 key={index}
                 className="bg-[#1c1c1c] rounded-xl overflow-hidden hover:scale-105 transition shadow-lg"
               >
-                {/* IMAGE */}
                 <img
                   src={item.img}
                   alt={`${item.name} ${item.type}`}
                   className="h-80 w-full object-cover"
                 />
-
-                {/* CONTENT */}
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
 
@@ -115,7 +108,7 @@ export default function SouthernKitchenLanding() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
 
           {/* FOOTER CTA */}
