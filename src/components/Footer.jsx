@@ -110,7 +110,7 @@ export default function Footer({
 
       {/* ================= BOTTOM BAR ================= */}
       <div className="border-t border-white/10 text-center text-xs text-slate-400 py-4">
-        © {new Date().getFullYear()} Southern Kitchen • Cloud Kitchen • All rights reserved
+        © {new Date().getFullYear()} The Southern Kitchen • All rights reserved
       </div>
     </footer>
   );
